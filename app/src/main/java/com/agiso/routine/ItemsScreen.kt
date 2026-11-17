@@ -33,6 +33,7 @@ import androidx.compose.material3.Switch
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -60,6 +61,8 @@ fun itemSummary(item: Item): String {
 
 @Composable
 fun ItemsScreen(tick: Int, onEdit: (Int) -> Unit) {
+    // 데이터가 바뀌면 이 화면을 다시 그리도록 변경 번호를 읽습니다.
+    val version = Store.tick.collectAsState().value
     val ctx = LocalContext.current
     val items = Store.activeItems(ctx)
     var name by remember { mutableStateOf("") }

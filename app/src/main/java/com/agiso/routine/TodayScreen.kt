@@ -26,6 +26,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -43,6 +44,8 @@ import java.util.Locale
 
 @Composable
 fun TodayScreen(tick: Int) {
+    // 데이터가 바뀌면 이 화면을 다시 그리도록 변경 번호를 읽습니다.
+    val version = Store.tick.collectAsState().value
     val ctx = LocalContext.current
     val today = LocalDate.now()
     val due = Store.dueItems(ctx, today)

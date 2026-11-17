@@ -76,6 +76,8 @@ class RoutineWidget : GlanceAppWidget() {
 
 @Composable
 private fun WidgetContent(ctx: Context, tick: Int) {
+    // 데이터가 바뀌면 이 화면을 다시 그리도록 변경 번호를 읽습니다.
+    val version = Store.tick.collectAsState().value
     val today = LocalDate.now()
     val due = Store.dueItems(ctx, today)
     val doneCount = due.count { Store.isDone(ctx, it, today) }
