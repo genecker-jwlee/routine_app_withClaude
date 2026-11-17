@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">아기소 루틴</string>
+    <string name="widget_desc">오늘의 루틴을 홈 화면에서 바로 체크합니다</string>
+</resources>

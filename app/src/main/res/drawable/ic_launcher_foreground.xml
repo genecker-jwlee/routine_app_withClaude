@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- 귀 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M22,46a9,6.5 0 1,0 18,0a9,6.5 0 1,0 -18,0" />
+    <path android:fillColor="#FFFFFF" android:pathData="M68,46a9,6.5 0 1,0 18,0a9,6.5 0 1,0 -18,0" />
+    <path android:fillColor="#F3A98A" android:pathData="M25,46a5,3.5 0 1,0 10,0a5,3.5 0 1,0 -10,0" />
+    <path android:fillColor="#F3A98A" android:pathData="M73,46a5,3.5 0 1,0 10,0a5,3.5 0 1,0 -10,0" />
+    <!-- 뿔 -->
+    <path android:fillColor="#FFF1DC" android:pathData="M38,32a4,4.5 0 1,0 8,0a4,4.5 0 1,0 -8,0" />
+    <path android:fillColor="#FFF1DC" android:pathData="M62,32a4,4.5 0 1,0 8,0a4,4.5 0 1,0 -8,0" />
+    <!-- 얼굴 -->
+    <path android:fillColor="#FFFFFF" android:pathData="M32,54a22,21 0 1,0 44,0a22,21 0 1,0 -44,0" />
+    <!-- 얼룩 -->
+    <path android:fillColor="#7A4A32" android:pathData="M57,41a6,4.5 0 1,0 12,0a6,4.5 0 1,0 -12,0" />
+    <!-- 코 -->
+    <path android:fillColor="#F7B9A0" android:pathData="M39,64a15,10 0 1,0 30,0a15,10 0 1,0 -30,0" />
+    <path android:fillColor="#B8502F" android:pathData="M46,64a2,2 0 1,0 4,0a2,2 0 1,0 -4,0" />
+    <path android:fillColor="#B8502F" android:pathData="M58,64a2,2 0 1,0 4,0a2,2 0 1,0 -4,0" />
+    <!-- 눈 -->
+    <path android:fillColor="#2A211C" android:pathData="M42.4,50a2.6,2.6 0 1,0 5.2,0a2.6,2.6 0 1,0 -5.2,0" />
+    <path android:fillColor="#2A211C" android:pathData="M60.4,50a2.6,2.6 0 1,0 5.2,0a2.6,2.6 0 1,0 -5.2,0" />
+</vector>
