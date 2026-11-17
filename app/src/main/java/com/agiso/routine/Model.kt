@@ -1,6 +1,7 @@
 package com.agiso.routine
 
 import android.content.Context
+import androidx.compose.runtime.mutableIntStateOf
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import org.json.JSONArray
@@ -49,6 +50,9 @@ class DaySummary(val done: List<Item>, val missed: List<Item>, val counts: Map<I
 object Store {
     private val _tick = MutableStateFlow(0)
     val tick: StateFlow<Int> get() = _tick
+
+    /** 화면이 직접 읽는 변경 번호. 값이 바뀌면 읽고 있는 화면이 다시 그려집니다. */
+    val version = mutableIntStateOf(0)
 
     private var loaded = false
     private val items = ArrayList<Item>()
@@ -212,11 +216,13 @@ object Store {
         snapshotToday()
         save(ctx)
         _tick.value = _tick.value + 1
+        version.intValue = version.intValue + 1
         Widgets.refresh(ctx)
     }
 
     fun bump() {
         _tick.value = _tick.value + 1
+        version.intValue = version.intValue + 1
     }
 
     @Synchronized
@@ -225,6 +231,7 @@ object Store {
         if (snapshotToday()) {
             save(ctx)
             _tick.value = _tick.value + 1
+            version.intValue = version.intValue + 1
         }
     }
 

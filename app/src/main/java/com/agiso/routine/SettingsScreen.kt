@@ -74,7 +74,7 @@ private fun OutlineButton(text: String, onClick: () -> Unit) {
 @Composable
 fun SettingsScreen(tick: Int) {
     // 데이터가 바뀌면 이 화면을 다시 그리도록 변경 번호를 읽습니다.
-    val version = Store.tick.collectAsState().value
+    val version = Store.version.intValue
     val ctx = LocalContext.current
     val prefs = Store.prefs(ctx)
     val today = LocalDate.now()
@@ -192,5 +192,6 @@ fun SettingsScreen(tick: Int) {
         }
 
         Text("체크는 매일 자정에 자동으로 초기화됩니다.", color = C.sub, fontSize = 13.sp)
+        Text("아기소 루틴 $BUILD_LABEL", color = C.sub, fontSize = 13.sp)
     }
 }

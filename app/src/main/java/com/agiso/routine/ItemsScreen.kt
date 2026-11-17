@@ -62,7 +62,7 @@ fun itemSummary(item: Item): String {
 @Composable
 fun ItemsScreen(tick: Int, onEdit: (Int) -> Unit) {
     // 데이터가 바뀌면 이 화면을 다시 그리도록 변경 번호를 읽습니다.
-    val version = Store.tick.collectAsState().value
+    val version = Store.version.intValue
     val ctx = LocalContext.current
     val items = Store.activeItems(ctx)
     var name by remember { mutableStateOf("") }

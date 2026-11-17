@@ -62,6 +62,9 @@ object C {
     val danger = Color(0xFF8C1D18)
 }
 
+/** 설정 화면에 표시하는 빌드 번호. 새 APK가 설치됐는지 확인하는 용도입니다. */
+const val BUILD_LABEL = "빌드 4"
+
 val DAY_NAMES = listOf("일", "월", "화", "수", "목", "금", "토")
 
 fun fmtMin(minutes: Int): String {
